@@ -6,30 +6,53 @@ extra_cheese = input("Do you want extra cheese? Y or N ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
+bill = 0
 
-if size == 'S':
-  S = 15
-  if add_pepperoni == 'Y':
-    S += 2
-    if extra_cheese == 'Y':
-      S += 1
-  print(f'your final bill is: ${S}')
-elif size == 'M':
-  M = 20
-  if add_pepperoni == 'Y':
-    M += 3
-    if extra_cheese == 'Y':
-      M += 1
-  print(f'your final bill is: ${M}')
-elif size == 'L':
-  L = 25
-  if add_pepperoni == 'Y':
-    L += 3
-    if extra_cheese == 'Y':
-      L += 1
-  print(f'your final bill is: ${L}')
+if size == "S":
+  bill += 15
+elif size == "M":
+  bill += 20
 else:
-  print("size not known")
+  bill += 25
+
+if add_pepperoni == "Y":
+  if size == "S":
+    bill += 2
+  else:
+    bill += 3
+    
+if extra_cheese == "Y":
+  bill += 1
+  
+print(f"Your final bill is: ${bill}.")
+
+
+# S = 0
+# M = 0
+# L = 0
+# if size == 'S':
+#   S += 15
+# if add_pepperoni == 'Y':
+#   S += 2
+# if extra_cheese == 'Y':
+#   S += 1
+# print(f'your final bill is: ${S}')
+# # elif size == 'M':
+# #   M = 20
+# #   if add_pepperoni == 'Y':
+# #     M += 3
+# #     if extra_cheese == 'Y':
+# #       M += 1
+# #   print(f'your final bill is: ${M}')
+# # elif size == 'L':
+# #   L = 25
+# #   if add_pepperoni == 'Y':
+# #     L += 3
+# #     if extra_cheese == 'Y':
+# #       L += 1
+# #   print(f'your final bill is: ${L}')
+# else:
+#   print("size not known")
 
 
 
